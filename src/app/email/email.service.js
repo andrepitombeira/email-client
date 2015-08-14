@@ -3,11 +3,18 @@
 
   angular
     .module('emailClient')
-    .controller('EmailService', EmailService);
+    .factory('emailService', emailService);
 
   /** @ngInject */
-  function EmailService() {
-    var service = {};
+  function emailService($http) {
+    var service = {
+      getEmails: getEmails
+    };
+
     return service;
+
+    function getEmails() {
+      return $http.get('app/api/emails.json');
+    }
   }
 })();

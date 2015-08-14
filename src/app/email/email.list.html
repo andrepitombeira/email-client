@@ -1,27 +1,12 @@
 <div class="email-list">
   <!--Header-->
   <div class="filter">
-    <input id="showReadFilter" name="showReadFilter" type="checkbox"/>
+    <input id="showReadFilter" name="showReadFilter" type="checkbox" data-ng-click="vm.toggleReadFilter()"/>
     <label for="showReadFilter">Show read</label>
   </div>
 
   <!--List-->
-  <div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
-    <div data-ng-include="'app/email/partials/_email.item.html'"></div>
+  <div data-ng-repeat="email in vm.emails | filter: vm.readFilter | orderBy: '-dateReceived'">
     <div data-ng-include="'app/email/partials/_email.item.html'"></div>
   </div>
 </div>
