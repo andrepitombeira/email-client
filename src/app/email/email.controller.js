@@ -15,6 +15,7 @@
     vm.readFilter = readFilter;
     vm.selectedEmail = null;
 
+    vm.activate = activate;
     vm.selectEmail = selectEmail;
     vm.toggleReadFilter = toggleReadFilter;
 
