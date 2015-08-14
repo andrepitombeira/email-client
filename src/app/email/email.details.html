@@ -1,8 +1,8 @@
-<div class="email-details">
+<div class="email-details" data-ng-show="vm.selectedEmail">
   <div class="header">
     <p>From: <strong>{{vm.selectedEmail.fromEmail}}</strong></p>
-    <p>To: <strong>Peter Griffin</strong></p>
-    <p>Received: <strong>{{vm.selectedEmail.dateReceived}}</strong></p>
+    <p>To: <strong>{{vm.user.name}}</strong></p>
+    <p>Received: <strong>{{vm.selectedEmail.dateReceived | date : fullDate}}</strong></p>
   </div>
   <div class="body">
     <h4>Subject: {{vm.selectedEmail.subject}}</h4>
@@ -10,4 +10,8 @@
      {{vm.selectedEmail.content}}
     </p>
   </div>
+</div>
+
+<div data-ng-show="!vm.selectedEmail">
+  <p>There is no email selected.</p>
 </div>

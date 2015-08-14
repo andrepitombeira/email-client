@@ -1,6 +1,5 @@
 <div class="email-item" data-ng-click="vm.selectEmail(email)">
   <p class="fromName">{{email.fromName}}</p>
-  <span class="dateReceived">{{email.dateReceived | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+  <span class="dateReceived">{{email.dateReceived | date:'HH:mm:ss'}}</span>
   <p class="subject">{{email.subject}}</p>
-  <p>{{email.read}}</p>
 </div>

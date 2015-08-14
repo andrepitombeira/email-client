@@ -11,8 +11,9 @@
         readFilter = {read: false};
 
     vm.emails = [];
-    vm.selectedEmail = {};
+    vm.user = {name: 'Peter Griffin'};
     vm.readFilter = readFilter;
+    vm.selectedEmail = null;
 
     vm.selectEmail = selectEmail;
     vm.toggleReadFilter = toggleReadFilter;
