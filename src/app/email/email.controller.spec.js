@@ -23,7 +23,7 @@
       });
     }));
 
-    describe('Select Email', function() {
+    describe('selectEmail function', function() {
       var email;
 
       beforeEach(function() {
@@ -41,7 +41,7 @@
       });
     });
 
-    describe('Toggle Read Filter', function() {
+    describe('toggleReadFilter function', function() {
 
       it('should activate read filter', function() {
         EmailController.readFilter = {};
@@ -60,7 +60,7 @@
       });
     });
 
-    describe('Activate', function() {
+    describe('activate function', function() {
       var res,
           emails;
 

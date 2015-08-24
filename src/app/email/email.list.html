@@ -8,5 +8,6 @@
   <!--List-->
   <div data-ng-repeat="email in vm.emails | filter: vm.readFilter | orderBy: '-dateReceived'">
     <div data-ng-include="'app/email/partials/_email.item.html'"></div>
+    <email-item></email-item>
   </div>
 </div>

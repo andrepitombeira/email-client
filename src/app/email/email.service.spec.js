@@ -12,7 +12,7 @@
       http = _$http_;
     }));
 
-    describe('Get emails', function() {
+    describe('getEmails function', function() {
       var url = 'app/api/emails.json';
 
       it('should get emails', function() {
